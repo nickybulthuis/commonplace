@@ -1,0 +1,16 @@
+{{ $taxonomyName := .taxonomyName }}
+{{ $terms := .terms }}
+{{ $currentPage := .currentPage }}
+  {{ with site.GetPage (printf "/%s" $taxonomyName) }} <!-- Use printf to construct the taxonomy path -->
+    {{ range $termName, $weightedPages := $terms }}
+        {{ with site.GetPage (printf "/%s/%s" $taxonomyName $termName) }} <!-- Construct the term's path -->
+          {{ if eq . $currentPage }}
+            <a class="tag is-dark"
+               href="/">{{ .LinkTitle }}</a>
+          {{ else }}
+            <a class="tag"
+               href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          {{ end }}
+        {{ end }}
+    {{ end }}
+{{ end }}

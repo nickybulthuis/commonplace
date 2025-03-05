@@ -1,0 +1,43 @@
+# Compiled files
+*.o
+*.so
+*.dll
+
+# Logs and databases
+*.log
+*.sqlite
+*.sqlite3
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+*.iml
+*.swo
+*.sln
+*.user
+*.idea/
+*.vscode/
+
+# Build directories
+build/
+dist/
+public/
+
+# Unit test / coverage reports
+htmlcov/
+.coverage
+.pytest_cache/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+.hugo_build.lock
+
+# Dependency directories
+node_modules/
+
+# Development Binaries
+bin/

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}"
+      dir="{{ or site.Language.LanguageDirection `ltr` }}" class="has-background-white-bis">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="">
+<section>
+  <div class="container is-max-desktop">
+    <div class="hero">
+      <div class="hero-body">
+        <p class="title is-3">Commonplace</p>
+        <p class="subtitle is-5">Explore, learn, and grow one quote at a time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<main class="container is-max-desktop">
+  <div class="columns">
+    <div class="column is-two-thirds">{{ block "main" . }}{{ end }}</div>
+    <div class="column is-one-third">
+      <aside class="is-hidden-mobile">{{ partial "taxonomies.html" . }}</aside>
+    </div>
+  </div>
+</main>
+<footer class="footer has-text-centered is-size-7 mt-5 container is-max-desktop">
+  {{ partial "footer.html" . }}
+</footer>
+</body>
+</html>

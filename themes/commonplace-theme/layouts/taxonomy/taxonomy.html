@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+<div class="media-list">
+    {{ range (.Paginator).Pages }}
+    {{ .Render "quote" }}
+    {{ end }}
+
+</div>
+{{ partial "pagination.html" . }}
+{{ end }}
+

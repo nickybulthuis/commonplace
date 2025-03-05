@@ -1,0 +1,23 @@
+{{ $taxonomyName := .taxonomyName }}
+{{ $terms := .terms }}
+{{ $currentPage := .currentPage }}
+{{ with site.GetPage (printf "/%s" $taxonomyName) }} <!-- Use printf to construct the taxonomy path -->
+
+<div class="container mb-5">
+  <h6 class="title is-6 mb-3">
+    {{ if isset .Params "icon" }}
+    <span class="icon-text">
+      <span class="icon">
+        <iconify-icon icon="{{ .Params.icon }}"></iconify-icon>
+      </span>
+      <span>{{ .LinkTitle }}</span>
+    </span>
+    {{ else }}
+      {{ .LinkTitle }}
+    {{ end }}
+  </h6>
+  <div class="tags">
+    {{ partial "taxonomy-tag-list.html" (dict "taxonomyName" $taxonomyName "terms" $terms "currentPage" $currentPage) }}
+  </div>
+</div>
+{{ end }}

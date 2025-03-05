@@ -1,0 +1,24 @@
+baseURL: 'https://example.org/'
+languageCode: 'en-us'
+title: 'Commonplace'
+theme: 'commonplace-theme'
+
+languages:
+
+  en:
+    disabled: false
+    languageCode: en-US
+    languageDirection: ltr
+    languageName: English
+    weight: 2
+    menus:
+      main:
+        - name: Quotes
+          pageRef: /quotes
+          weight: 10
+          params:
+            icon: mdi-format-quote-open
+
+taxonomies:
+  tag: 'tags'
+

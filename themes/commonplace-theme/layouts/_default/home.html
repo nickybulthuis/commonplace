@@ -1,0 +1,10 @@
+{{ define "main" }}
+{{ $paginator := .Paginate (where (.Site.RegularPages) "Type" "quotes") }}
+
+<div class="media-list">
+    {{ range (.Paginator).Pages }}
+    {{ .Render "quote" }}
+    {{ end }}
+</div>
+{{ partial "pagination.html" . }}
+{{ end }}

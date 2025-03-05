@@ -1,0 +1,19 @@
+<article class="media">
+<!--  <figure class="media-left">-->
+<!--    <p class="image is-64x64">-->
+<!--      <img src="https://bulma.io/assets/images/placeholders/128x128.png" />-->
+<!--    </p>-->
+<!--  </figure>-->
+  <div class="media-content">
+    <div class="content has-text-weight-medium">
+      {{ .Summary }}
+    </div>
+    <nav class="level is-mobile">
+      <div class="level-left">
+        <div class="is-size-7">
+          {{ partial "tags.html" (dict "taxonomy" "tags" "page" $.Page) }}
+        </div>
+      </div>
+    </nav>
+  </div>
+</article>

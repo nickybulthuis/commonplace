@@ -1,0 +1,10 @@
+name: 'commonplace-theme'
+license: 'MIT'
+licenselink: 'https://github.com/nickybulthuis/commonplace-theme/LICENSE'
+description: 'A commonplace theme based on Bulma.io'
+
+homepage: 'https://github.com/nickybulthuis/commonplace'
+
+author:
+  name: 'Nicky Bulthuis'
+  homepage: 'https://github.com/nickybulthuis'

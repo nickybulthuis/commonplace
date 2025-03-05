@@ -1,0 +1,18 @@
+{{ $customOrder := site.Params.taxonomies.order }}
+{{ $currentPage := . }}
+{{ if $customOrder }}
+  {{ range $taxonomyName := $customOrder }}
+    {{ $terms := index site.Taxonomies $taxonomyName }}
+    {{ if $terms }}
+      {{ partial "taxonomy-group-list.html" (dict "taxonomyName" $taxonomyName "terms" $terms "currentPage" $currentPage) }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+{{/* Fallback: Directly iterate over site.Taxonomies if no custom order is provided */}}
+  {{ range $taxonomyName, $terms := site.Taxonomies }}
+    {{ if $terms}}
+      {{ partial "taxonomy-group-list.html" (dict "taxonomyName" $taxonomyName "terms" $terms "currentPage" $currentPage) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
