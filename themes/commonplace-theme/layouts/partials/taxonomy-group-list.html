@@ -16,7 +16,7 @@
       {{ .LinkTitle }}
     {{ end }}
   </h6>
-  <div class="tags">
+  <div class="field is-grouped is-grouped-multiline">
     {{ partial "taxonomy-tag-list.html" (dict "taxonomyName" $taxonomyName "terms" $terms "currentPage" $currentPage) }}
   </div>
 </div>

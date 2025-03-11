@@ -21,4 +21,11 @@ languages:
 
 taxonomies:
   tag: 'tags'
+  theme: 'themes'
+
+params:
+  taxonomies:
+    order:
+      - 'themes'
+      - 'tags'
 

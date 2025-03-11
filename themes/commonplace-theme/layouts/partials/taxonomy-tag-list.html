@@ -1,16 +1,36 @@
 {{ $taxonomyName := .taxonomyName }}
 {{ $terms := .terms }}
 {{ $currentPage := .currentPage }}
-  {{ with site.GetPage (printf "/%s" $taxonomyName) }} <!-- Use printf to construct the taxonomy path -->
-    {{ range $termName, $weightedPages := $terms }}
-        {{ with site.GetPage (printf "/%s/%s" $taxonomyName $termName) }} <!-- Construct the term's path -->
-          {{ if eq . $currentPage }}
-            <a class="tag is-dark"
-               href="/">{{ .LinkTitle }}</a>
-          {{ else }}
-            <a class="tag"
-               href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-          {{ end }}
-        {{ end }}
+{{ $sortedTerms := slice }} <!-- Maak een lege slice om termen op te slaan -->
+
+{{ range $termName, $weightedPages := $terms }}
+{{ $sortedTerms = $sortedTerms | append (dict "name" $termName "count" (len $weightedPages)) }}
+{{ end }}
+
+<!-- Sorteer de termen op het aantal pagina's, aflopend -->
+{{ $sortedTerms = sort $sortedTerms "count" "desc" }}
+
+{{ with site.GetPage (printf "/%s" $taxonomyName) }}
+{{ range $sortedTerms }}
+{{ $termName := .name }} <!-- Haal de naam van de term op -->
+{{ $numPages := .count }} <!-- Haal het aantal pagina's op -->
+
+{{ with site.GetPage (printf "/%s/%s" $taxonomyName $termName) }}
+
+<div class="control">
+  <div class="tags has-addons">
+    {{ if eq . $currentPage }}
+    <a class="tag is-dark"
+       href="/">{{ .LinkTitle }}</a>
+    {{ else }}
+    <a class="tag"
+       href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
     {{ end }}
+    <a class="tag is-primary">{{ $numPages }}</a>
+  </div>
+</div>
+
+
+{{ end }}
+{{ end }}
 {{ end }}

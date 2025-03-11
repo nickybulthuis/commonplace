@@ -1,36 +1,11 @@
-ul.term-list {
-    column-count: 5;
-    column-gap: 10px;
-    list-style-position: inside;
-}
-
-ul.term-list li {
-    break-inside: avoid;
-}
-
-@media (max-width: 1216px) {
-    ul.term-list {
-        column-count: 4;
-    }
-}
-
-@media (max-width: 1024px) {
-    ul.term-list {
-        column-count: 3;
-    }
-}
-
-@media (max-width: 769px) {
-    ul.term-list {
-        column-count: 2;
-    }
-}
-
-.image.is-64xauto {
-    max-width: 64px;
-    height: auto;
+body {
+    font-family: Poppins, sans-serif;
 }
 
 footer {
     border-top: 1px solid hsla(221, 14%, 86%, 0.5);
+}
+
+.card {
+    margin-bottom: 0 !important;
 }
