@@ -6,7 +6,7 @@
   <!--  </figure>-->
   <div class="card-header">
     <p class="card-header-title">
-      {{ partial "themes.html" (dict "taxonomy" "themes" "page" $.Page) }}
+      {{ partial "taxonomy-link-list.html" (dict "taxonomy" "themes" "page" $.Page) }}
     </p>
   </div>
   <div class="card-content">
@@ -24,12 +24,12 @@
   <div class="card-footer">
     <div class="card-footer-item">
       <span class="is-size-7">
-        {{ partial "sources.html" (dict "taxonomy" "sources" "page" $.Page) }}
+        {{ partial "taxonomy-link-list.html" (dict "taxonomy" "sources" "page" $.Page) }}
       </span>
     </div>
     <div class="card-footer-item">
       <span class="is-size-7">
-        {{ partial "authors.html" (dict "taxonomy" "authors" "page" $.Page) }}
+        {{ partial "taxonomy-link-list.html" (dict "taxonomy" "authors" "page" $.Page) }}
       </span>
     </div>
   </div>
