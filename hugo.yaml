@@ -22,10 +22,14 @@ languages:
 taxonomies:
   tag: 'tags'
   theme: 'themes'
+  source: 'sources'
+  author: 'authors'
 
 params:
   taxonomies:
     order:
       - 'themes'
+      - 'authors'
+      - 'sources'
       - 'tags'
 

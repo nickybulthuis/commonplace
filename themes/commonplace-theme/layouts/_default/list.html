@@ -1,11 +1,13 @@
 {{ define "main" }}
-{{ .Content }}
-
+<div class="mb-4">
+  {{ .Title }}
+  {{ .Content }}
+</div>
 <div class="fixed-grid has-1-cols-mobile has-2-cols-tablet has-3-cols-desktop">
   <div id="results" class="grid is-gap-3 fade-out">
-      {{ range (.Paginator).Pages }}
-      {{ .Render "quote" }}
-      {{ end }}
+    {{ range (.Paginator).Pages }}
+    {{ .Render "quote" }}
+    {{ end }}
   </div>
 </div>
 {{ partial "pagination.html" . }}

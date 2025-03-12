@@ -1,19 +1,36 @@
 <article class="card">
-<!--  <figure class="media-left">-->
-<!--    <p class="image is-64x64">-->
-<!--      <img src="https://bulma.io/assets/images/placeholders/128x128.png" />-->
-<!--    </p>-->
-<!--  </figure>-->
+  <!--  <figure class="media-left">-->
+  <!--    <p class="image is-64x64">-->
+  <!--      <img src="https://bulma.io/assets/images/placeholders/128x128.png" />-->
+  <!--    </p>-->
+  <!--  </figure>-->
+  <div class="card-header">
+    <p class="card-header-title">
+      {{ partial "themes.html" (dict "taxonomy" "themes" "page" $.Page) }}
+    </p>
+  </div>
   <div class="card-content">
     <div class="content">
       {{ .Summary }}
     </div>
-    <nav class="level is-mobile">
+    <div class="level">
       <div class="level-left">
         <div class="is-size-7">
           {{ partial "tags.html" (dict "taxonomy" "tags" "page" $.Page) }}
         </div>
       </div>
-    </nav>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="card-footer-item">
+      <span class="is-size-7">
+        {{ partial "sources.html" (dict "taxonomy" "sources" "page" $.Page) }}
+      </span>
+    </div>
+    <div class="card-footer-item">
+      <span class="is-size-7">
+        {{ partial "authors.html" (dict "taxonomy" "authors" "page" $.Page) }}
+      </span>
+    </div>
   </div>
 </article>

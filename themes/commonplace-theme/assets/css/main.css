@@ -6,6 +6,16 @@ footer {
     border-top: 1px solid hsla(221, 14%, 86%, 0.5);
 }
 
+/*
+ * Makes the cards the same height.
+ */
 .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     margin-bottom: 0 !important;
+}
+.card .card-content {
+    flex-grow: 1; /* Grow the card-content, to take up any remaining space */
+    margin-bottom: 0;
 }
