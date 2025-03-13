@@ -13,8 +13,8 @@ languages:
     weight: 2
     menus:
       main:
-        - name: Quotes
-          pageRef: /quotes
+        - name: Notecards
+          pageRef: /notecards
           weight: 10
           params:
             icon: mdi-format-quote-open
@@ -33,3 +33,17 @@ params:
       - 'sources'
       - 'tags'
 
+
+related:
+  includeNewer: true
+  indices:
+    - name: tags
+      weight: 80
+    - name: themes
+      weight: 60
+    - name: sources
+      weight: 40
+    - name: authors
+      weight: 20
+  threshold: 95
+  toLower: false

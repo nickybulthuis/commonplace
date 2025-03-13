@@ -16,6 +16,13 @@ footer {
     margin-bottom: 0 !important;
 }
 .card .card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    row-gap: 10px;
+
+}
+.card .card-content .content {
     flex-grow: 1; /* Grow the card-content, to take up any remaining space */
     margin-bottom: 0;
 }

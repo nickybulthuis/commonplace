@@ -1,18 +1,13 @@
 <article class="card">
-  <!--  <figure class="media-left">-->
-  <!--    <p class="image is-64x64">-->
-  <!--      <img src="https://bulma.io/assets/images/placeholders/128x128.png" />-->
-  <!--    </p>-->
-  <!--  </figure>-->
   <div class="card-header">
     <p class="card-header-title is-size-7">
       {{ partial "taxonomy-link-list.html" (dict "taxonomy" "themes" "page" $.Page) }}
     </p>
   </div>
   <div class="card-content">
-    <div class="content">
+    <a href="{{ .RelPermalink }}" class="content has-text-dark">
       {{ .Summary }}
-    </div>
+    </a>
     <div class="level">
       <div class="level-left">
         <div class="is-size-7">

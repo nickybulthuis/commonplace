@@ -1,6 +1,17 @@
 {{ define "main" }}
-{{ .Content }}
-{{ range .Pages }}
-{{ .Render "summary" }}
+<div class="fixed-grid has-1-cols-mobile has-2-cols-tablet has-3-cols-desktop">
+  <div id="results" class="grid is-gap-3 fade-out">
+    {{ .Render "notecard" }}
+  </div>
+</div>
+{{ with site.RegularPages.Related . | first 9 }}
+<p>Related content:</p>
+<div class="fixed-grid has-1-cols-mobile has-2-cols-tablet has-3-cols-desktop">
+  <div class="grid is-gap-3 fade-out">
+    {{ range . }}
+    {{ .Render "notecard" }}
+    {{ end }}
+  </div>
+</div>
 {{ end }}
 {{ end }}
