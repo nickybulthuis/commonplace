@@ -1,3 +1,12 @@
+{{ define "hero" }}
+<div class="hero">
+  <div class="hero-body">
+    <p class="title is-3">{{ .Title }}</p>
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}
+
 {{ define "main" }}
 <ul class="term-list">
 {{ range .Pages.ByTitle }}
