@@ -3,7 +3,7 @@ date: '2025-03-06T14:07:14+01:00'
 draft: false
 authors: Morgan Housel
 sources: The Psychology of Money
-title: '202503061407'
+title: 'Resilience in Crisis Defines Investment Success'
 themes:
     - Strategy
 ---

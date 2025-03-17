@@ -3,7 +3,7 @@ date: '2025-03-06T14:19:07+01:00'
 draft: false
 authors: Morgan Housel
 sources: The Psychology of Money
-title: '202503061419'
+title: 'Desire Distorts Perception of Truth'
 themes:
     - Psychology
 ---

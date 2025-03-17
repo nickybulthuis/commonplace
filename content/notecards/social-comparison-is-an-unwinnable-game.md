@@ -3,7 +3,7 @@ date: '2025-03-06T13:59:03+01:00'
 draft: false
 authors: Morgan Housel
 sources: The Psychology of Money
-title: '202503061359'
+title: 'Social Comparison Is an Unwinnable Game'
 themes:
     - Stoicism
 ---

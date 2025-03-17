@@ -3,7 +3,7 @@ date: '2025-03-06T14:21:07+01:00'
 draft: false
 authors: Morgan Housel
 sources: The Psychology of Money
-title: '202503061421'
+title: 'Peace of mind is the best financial guide'
 themes:
     - Strategy
 ---

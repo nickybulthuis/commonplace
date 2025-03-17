@@ -3,7 +3,7 @@ date: '2025-03-06T14:16:06+01:00'
 draft: false
 authors: Morgan Housel
 sources: The Psychology of Money
-title: '202503061416'
+title: 'Balance Enhances Long-Term Stability'
 themes:
     - Strategy
 

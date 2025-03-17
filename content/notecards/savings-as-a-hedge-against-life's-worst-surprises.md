@@ -3,7 +3,7 @@ date: '2025-03-06T14:22:03+01:00'
 draft: false
 authors: Morgan Housel
 sources: The Psychology of Money
-title: '202503061422'
+title: "Savings as a Hedge against Life's Worst Surprises"
 themes:
     - Strategy
 ---

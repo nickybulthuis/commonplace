@@ -3,7 +3,7 @@ date: '2025-03-06T10:02:03+01:00'
 draft: false
 authors: Morgan Housel
 sources: The Psychology of Money
-title: '202503061002'
+title: "Don't Risk Necessities for Desires"
 themes:
     - Stoicism
 ---

@@ -3,7 +3,7 @@ date: '2025-03-06T14:15:03+01:00'
 draft: false
 authors: Morgan Housel
 sources: The Psychology of Money
-title: '202503061415'
+title: 'Room for Error Acknowledges Uncertainty'
 themes:
     - Strategy
 ---
