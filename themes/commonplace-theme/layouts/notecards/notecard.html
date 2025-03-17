@@ -8,13 +8,6 @@
     <a href="{{ .RelPermalink }}" class="content has-text-dark">
       {{ .Summary }}
     </a>
-    <div class="level">
-      <div class="level-left">
-        <div class="is-size-7">
-          {{ partial "tags.html" (dict "taxonomy" "tags" "page" $.Page) }}
-        </div>
-      </div>
-    </div>
   </div>
   <div class="card-footer">
     <div class="card-footer-item">
