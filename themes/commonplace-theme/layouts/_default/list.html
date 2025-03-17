@@ -2,13 +2,16 @@
 <section class="container">
   <div class="hero">
     <div class="hero-body">
-      <p class="title is-3">{{ .Title }}</p>
+      <p class="title is-3"><a href="/" class="has-text-dark">{{ .Title }}</a></p>
       <p class="subtitle is-5">{{ .Params.subtitle }}</p>
     </div>
   </div>
 </section>
 {{ end }}
 {{ define "main" }}
+<section class="container">
+  {{ partial "breadcrumbs.html" . }}
+</section>
 <div class="fixed-grid has-1-cols-mobile has-2-cols-tablet has-3-cols-desktop">
   <div id="results" class="grid is-gap-3 fade-out">
     {{ range (.Paginator).Pages }}

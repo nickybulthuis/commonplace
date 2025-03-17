@@ -1,4 +1,15 @@
+{{ define "hero" }}
+<section class="container">
+  <div class="hero">
+    <div class="hero-body">
+      <p class="title is-3"><a href="/" class="has-text-dark">{{ .Title }}</a></p>
+      <p class="subtitle is-5">{{ .Params.subtitle }}</p>
+    </div>
+  </div>
+</section>
+{{ end }}
 {{ define "main" }}
+{{ partial "breadcrumbs.html" . }}
 <ul class="term-list">
 {{ range .Pages.ByTitle }}
   <li><a href="{{ .RelPermalink }}" class="has-text-link-20 cell" title="{{ .Title }}">{{ .Title }}</a></li>
