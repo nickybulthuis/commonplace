@@ -1,0 +1,42 @@
+<article class="card {{ if $.focus }}elevated{{end}}">
+  <div class="card-header">
+    <p class="card-header-title is-size-7">
+      {{ partial "taxonomy-link-list.html" (dict "taxonomy" "themes" "page" $.nc) }}&nbsp;
+    </p>
+    {{ if $.focus }}
+    <span class="card-header-icon has-text-link">
+      <span class="icon">
+        <i class="fas fa-crosshairs"></i>
+      </span>
+    </span>
+    {{ end }}
+  </div>
+
+  <div class="card-content">
+    {{ if $.focus }}
+      {{ .nc.Summary }}
+    {{ else }}
+    <a href="{{ .nc.RelPermalink }}" class="content has-text-dark">
+      {{ .nc.Summary }}
+    </a>
+    {{ end }}
+  </div>
+  {{ if or .nc.Params.authors .nc.Params.sources }}
+  <div class="card-footer">
+    {{ with .nc.Params.authors }}
+    <div class="card-footer-item">
+      <span class="is-size-7">
+        {{ partial "taxonomy-link-list.html" (dict "taxonomy" "authors" "page" $.nc) }}
+      </span>
+    </div>
+    {{ end }}
+    {{ with .nc.Params.sources }}
+    <div class="card-footer-item">
+      <span class="is-size-7">
+        {{ partial "taxonomy-link-list.html" (dict "taxonomy" "sources" "page" $.nc) }}
+      </span>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+</article>

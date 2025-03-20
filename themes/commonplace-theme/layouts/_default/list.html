@@ -12,7 +12,7 @@
 <div class="fixed-grid has-1-cols-mobile has-2-cols-tablet has-3-cols-desktop">
   <div id="results" class="grid is-gap-3 fade-out">
     {{ range (.Paginator).Pages }}
-    {{ .Render "notecard" }}
+    {{ partial "notecard.html" (dict "nc" .) }}
     {{ end }}
   </div>
 </div>
