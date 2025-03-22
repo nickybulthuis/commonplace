@@ -9,16 +9,21 @@
 </section>
 {{ end }}
 
-
 {{ define "main" }}
+<div class="columns is-centered mb-5">
+  <div class="column is-full-mobile is-full-tablet is-four-fifths-desktop is-three-fifths-widescreen">
+    {{ partial "notecard.html" (dict "nc" . "focus" true) }}
+  </div>
+</div>
+{{ with site.RegularPages.Related . }}
+<hr>
+<h5 class="title is-5">Related Notecards</h5>
 <div class="fixed-grid has-1-cols-mobile has-2-cols-tablet has-3-cols-desktop">
   <div class="grid is-gap-3 fade-out">
-    {{ partial "notecard.html" (dict "nc" . "focus" true) }}
-    {{ with site.RegularPages.Related . | first 9 }}
-      {{ range . }}
-        {{ partial "notecard.html" (dict "nc" .) }}
-      {{ end }}
+    {{ range . }}
+    {{ partial "notecard.html" (dict "nc" .) }}
     {{ end }}
   </div>
 </div>
+{{ end }}
 {{ end }}

@@ -1,15 +1,8 @@
-<article class="card {{ if $.focus }}elevated{{end}}">
+<article class="card">
   <div class="card-header">
     <p class="card-header-title is-size-7">
       {{ partial "taxonomy-link-list.html" (dict "taxonomy" "themes" "page" $.nc) }}&nbsp;
     </p>
-    {{ if $.focus }}
-    <span class="card-header-icon has-text-link">
-      <span class="icon">
-        <i class="fas fa-crosshairs"></i>
-      </span>
-    </span>
-    {{ end }}
   </div>
 
   <div class="card-content">
