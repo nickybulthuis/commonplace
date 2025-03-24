@@ -260,6 +260,12 @@ def main():
         content = info["content"]
         metadata = info["metadata"]
 
+        if "retags" in metadata:
+            del metadata["retags"]
+
+        if "themes" in metadata:
+            del metadata["themes"]
+
         post = frontmatter.Post(content=content, **metadata)
 
         with open(filename, "w", encoding="utf-8") as f:
