@@ -39,5 +39,5 @@ htmlcov/
 # Dependency directories
 node_modules/
 
-# Development Binaries
-bin/
+# Hugo Binaries
+bin/hugo.exe

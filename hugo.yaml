@@ -32,7 +32,6 @@ params:
       - 'authors'
       - 'sources'
 
-
 related:
   includeNewer: true
   indices:

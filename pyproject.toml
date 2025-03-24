@@ -1,0 +1,86 @@
+[tool.poetry]
+name = "commonplace"
+version = "0.1.0"
+description = ""
+authors = ["Nicky Bulthuis <nicky.bulthuis@valuecare.nl>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-frontmatter = "^1.1.0"
+requests = "^2.32.3"
+jinja2 = "^3.1.6"
+
+
+[tool.poetry.group.codestyle]
+optional = true
+
+[tool.poetry.group.codestyle.dependencies]
+ruff = "^0.8.1"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.5.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    'A', # flake8-builtins
+    'ASYNC', # https://docs.astral.sh/ruff/rules/#flake8-async-async
+    'B', # flake8-bugbear
+    'BLE', # flake8-blind-except
+    'C4', # unnecessary comprehensions, map()
+    'DTZ', # flake8-datetimez
+    'E', # pycodestyle
+    'ERA', # No commented out code
+    'EXE', # flake8-executable
+    'F', # pyflakes
+    'FLY', # flynt
+    'G', # flake8-logging-format
+    'I', # isort
+    'ICN', # https://github.com/joaopalmeiro/flake8-import-conventions
+    'LOG', # flake8-logging
+    'PERF', # perflint
+    'PIE', # https://pypi.org/project/flake8-pie/
+    'PLC', # Pylint conventions
+    'PLE', # Pylint error
+    'PLW', # Pylint warnings
+    'PT', # https://pypi.org/project/flake8-pytest-style/
+    'PTH', # flake8 use pathlib
+    'RET', # https://pypi.org/project/flake8-return/
+    'RUF', # Ruff rules
+    'S', # https://docs.astral.sh/ruff/rules/#flake8-bandit-s
+    'SIM', # https://pypi.org/project/flake8-simplify/
+    'T', # flake8-debugger
+    'TRY', # tryceratops
+    'UP', # pyupgrade
+    'W', # pycodestyle
+    #'ARG',  # flake8 unused arguments (not really helpful, unused func args are common and ok)
+    #'D',  # pydocstyle (too much)
+    #'N',  # pep8-naming (too opinionated)
+    'NPY', # numpy
+    'PD', # pandas
+]
+
+ignore = [
+    "RUF012", # Mutable class attributes should be annotated with `typing.ClassVar`
+    "S105", # Possible hardcoded password: 'password'
+    "G004", # Logging statement uses string formatting
+    "TRY003", # Try block should not be empty
+    "B008", # Do not use `==` to compare str, bytes, and int literals
+]
+# Allow fix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+exclude = ['*_test.py', '*.ipynb']
