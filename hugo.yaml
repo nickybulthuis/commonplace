@@ -29,6 +29,7 @@ params:
     order:
       - 'authors'
       - 'sources'
+      - 'tags'
 
 related:
   includeNewer: true
@@ -41,3 +42,6 @@ related:
       weight: 25
   threshold: 95
   toLower: false
+
+pagination:
+  pagerSize: 25
